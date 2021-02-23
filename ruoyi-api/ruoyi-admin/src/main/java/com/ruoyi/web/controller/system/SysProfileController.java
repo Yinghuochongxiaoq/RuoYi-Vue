@@ -1,6 +1,8 @@
 package com.ruoyi.web.controller.system;
 
 import java.io.IOException;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -56,6 +58,7 @@ public class SysProfileController extends BaseController
      * 修改用户
      */
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
+    @DemoCouldNotDo
     @PutMapping
     public AjaxResult updateProfile(@RequestBody SysUser user)
     {
@@ -77,6 +80,7 @@ public class SysProfileController extends BaseController
      * 重置密码
      */
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
+    @DemoCouldNotDo
     @PutMapping("/updatePwd")
     public AjaxResult updatePwd(String oldPassword, String newPassword)
     {

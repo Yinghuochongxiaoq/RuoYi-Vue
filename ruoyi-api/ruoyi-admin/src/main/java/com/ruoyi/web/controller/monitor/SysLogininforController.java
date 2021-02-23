@@ -1,6 +1,8 @@
 package com.ruoyi.web.controller.monitor;
 
 import java.util.List;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -50,6 +52,7 @@ public class SysLogininforController extends BaseController
 
     @PreAuthorize("@ss.hasPermi('monitor:logininfor:remove')")
     @Log(title = "登录日志", businessType = BusinessType.DELETE)
+    @DemoCouldNotDo
     @DeleteMapping("/{infoIds}")
     public AjaxResult remove(@PathVariable Long[] infoIds)
     {
@@ -58,6 +61,7 @@ public class SysLogininforController extends BaseController
 
     @PreAuthorize("@ss.hasPermi('monitor:logininfor:remove')")
     @Log(title = "登录日志", businessType = BusinessType.CLEAN)
+    @DemoCouldNotDo
     @DeleteMapping("/clean")
     public AjaxResult clean()
     {

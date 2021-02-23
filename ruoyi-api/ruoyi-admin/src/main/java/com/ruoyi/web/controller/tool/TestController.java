@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -90,6 +92,7 @@ public class TestController extends BaseController
 
     @ApiOperation("删除用户信息")
     @ApiImplicitParam(name = "userId", value = "用户ID", required = true, dataType = "int", paramType = "path")
+    @DemoCouldNotDo
     @DeleteMapping("/{userId}")
     public AjaxResult delete(@PathVariable Integer userId)
     {

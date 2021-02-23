@@ -1,6 +1,8 @@
 package com.ruoyi.quartz.controller;
 
 import java.util.List;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -76,6 +78,7 @@ public class SysJobController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('monitor:job:add')")
     @Log(title = "定时任务", businessType = BusinessType.INSERT)
+    @DemoCouldNotDo
     @PostMapping
     public AjaxResult add(@RequestBody SysJob sysJob) throws SchedulerException, TaskException
     {
@@ -92,6 +95,7 @@ public class SysJobController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('monitor:job:edit')")
     @Log(title = "定时任务", businessType = BusinessType.UPDATE)
+    @DemoCouldNotDo
     @PutMapping
     public AjaxResult edit(@RequestBody SysJob sysJob) throws SchedulerException, TaskException
     {
@@ -108,6 +112,7 @@ public class SysJobController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('monitor:job:changeStatus')")
     @Log(title = "定时任务", businessType = BusinessType.UPDATE)
+    @DemoCouldNotDo
     @PutMapping("/changeStatus")
     public AjaxResult changeStatus(@RequestBody SysJob job) throws SchedulerException
     {
@@ -133,6 +138,7 @@ public class SysJobController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('monitor:job:remove')")
     @Log(title = "定时任务", businessType = BusinessType.DELETE)
+    @DemoCouldNotDo
     @DeleteMapping("/{jobIds}")
     public AjaxResult remove(@PathVariable Long[] jobIds) throws SchedulerException, TaskException
     {

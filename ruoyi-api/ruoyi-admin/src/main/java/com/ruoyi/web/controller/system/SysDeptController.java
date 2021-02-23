@@ -2,6 +2,8 @@ package com.ruoyi.web.controller.system;
 
 import java.util.Iterator;
 import java.util.List;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -148,6 +150,7 @@ public class SysDeptController extends BaseController
     @PreAuthorize("@ss.hasPermi('system:dept:remove')")
     @Log(title = "部门管理", businessType = BusinessType.DELETE)
     @DeleteMapping("/{deptId}")
+    @DemoCouldNotDo
     public AjaxResult remove(@PathVariable Long deptId)
     {
         if (deptService.hasChildByDeptId(deptId))

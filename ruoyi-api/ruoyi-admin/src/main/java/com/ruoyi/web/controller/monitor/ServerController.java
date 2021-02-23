@@ -1,5 +1,6 @@
 package com.ruoyi.web.controller.monitor;
 
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import com.ruoyi.framework.web.domain.Server;
 public class ServerController extends BaseController
 {
     @PreAuthorize("@ss.hasPermi('monitor:server:list')")
+    @DemoCouldNotDo
     @GetMapping()
     public AjaxResult getInfo() throws Exception
     {

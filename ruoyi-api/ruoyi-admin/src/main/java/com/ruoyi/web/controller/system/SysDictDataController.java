@@ -1,6 +1,8 @@
 package com.ruoyi.web.controller.system;
 
 import java.util.List;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -81,6 +83,7 @@ public class SysDictDataController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('system:dict:add')")
     @Log(title = "字典数据", businessType = BusinessType.INSERT)
+    @DemoCouldNotDo
     @PostMapping
     public AjaxResult add(@Validated @RequestBody SysDictData dict)
     {
@@ -106,6 +109,7 @@ public class SysDictDataController extends BaseController
     @PreAuthorize("@ss.hasPermi('system:dict:remove')")
     @Log(title = "字典类型", businessType = BusinessType.DELETE)
     @DeleteMapping("/{dictCodes}")
+    @DemoCouldNotDo
     public AjaxResult remove(@PathVariable Long[] dictCodes)
     {
         return toAjax(dictDataService.deleteDictDataByIds(dictCodes));

@@ -1,6 +1,8 @@
 package com.ruoyi.web.controller.monitor;
 
 import java.util.List;
+
+import com.ruoyi.common.annotation.DemoCouldNotDo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -49,6 +51,7 @@ public class SysOperlogController extends BaseController
     }
 
     @PreAuthorize("@ss.hasPermi('monitor:operlog:remove')")
+    @DemoCouldNotDo
     @DeleteMapping("/{operIds}")
     public AjaxResult remove(@PathVariable Long[] operIds)
     {
@@ -57,6 +60,7 @@ public class SysOperlogController extends BaseController
 
     @Log(title = "操作日志", businessType = BusinessType.CLEAN)
     @PreAuthorize("@ss.hasPermi('monitor:operlog:remove')")
+    @DemoCouldNotDo
     @DeleteMapping("/clean")
     public AjaxResult clean()
     {
