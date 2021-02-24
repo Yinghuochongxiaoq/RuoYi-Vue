@@ -1,21 +1,21 @@
 <template>
   <div>
-    <svg-icon icon-class="question" @click="goto"/>
+    <svg-icon icon-class="question" @click="goto" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RuoYiDoc',
+  name: "RuoYiDoc",
   data() {
     return {
-      url: 'http://doc.ruoyi.vip/ruoyi-vue'
-    }
+      url: "https://aivabc.com",
+    };
   },
   methods: {
     goto() {
-      window.open(this.url)
-    }
-  }
-}
+      window.open(this.url);
+    },
+  },
+};
 </script>
